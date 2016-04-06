@@ -1,4 +1,4 @@
-﻿//this method extends custom selecctize to 
+﻿//this method extends custom selectizeJs to 
 //give an ability to process sccroll event in dropdown and 
 //download options if scroll is in bottom of the dropdown
 $.fn.lazySelectize = function (settings) {
