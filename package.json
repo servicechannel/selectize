@@ -1,6 +1,6 @@
 {
   "name": "lazyselectize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This plugin gives an ability to process scroll event in dropdown and download options if scroll is in bottom of the dropdown",
   "main": "dist/js/lazyselectize.js",
   "scripts": {
@@ -12,8 +12,10 @@
   },
   "keywords": [
     "selectize",
+	"lazyselectize"
     "scroll",
-    "event"
+    "event",
+	"infinite scroll"
   ],
   "author": "Alex Suhanov",
   "license": "MIT",
@@ -22,7 +24,7 @@
   },
   "homepage": "https://github.com/servicechannel/selectize#readme",
   "dependencies": {
-    "selectize": "^0.12.1"
+    "selectize": "*"
   },
   "devDependencies": {
     "grunt": "0.4.x",
