@@ -13,7 +13,6 @@ $.fn.lazySelectize = function (settings) {
     self.convertArrayToOptions = settings.convertArrayToOptions;
     if (settings.onDropdownClose === undefined) {
         settings.onDropdownClose = function() {
-
         };
     }
 
