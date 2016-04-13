@@ -3,7 +3,6 @@
 //download options if scroll is in bottom of the dropdown
 $.fn.lazySelectize = function (settings) {
     var self = {};
-    debugger;
     self.loadItemsUrl = settings.loadItemsUrl;
     self.index = 0;
     self.scrollpos = -1;
@@ -28,7 +27,6 @@ $.fn.lazySelectize = function (settings) {
     self.disableScore = settings.disableScore;
     self.valueField = settings.valueField;
 
-    /////
     settings.load = function(query, callback) {
         self.runprocess = false;
         $.ajax({
@@ -58,7 +56,6 @@ $.fn.lazySelectize = function (settings) {
         });
     };
 
-    ////
     var defaults = $.fn.selectize.defaults;
     var selectizeSettings = $.extend({}, defaults, settings);
     this.selectize(selectizeSettings);
