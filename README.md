@@ -26,7 +26,7 @@ All pre-built files needed to use Selectize can be found in the ["dist"](dist/js
 ### Usage
 
 ```js
-$('select').lazyselectize(options);
+$('select').lazySelectize(options);
 ```
 
 The available selectize options are [documented here](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md).  Options object may include both selectize and lazyselectize options.
