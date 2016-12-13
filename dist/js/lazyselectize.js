@@ -29,7 +29,7 @@ $.fn.lazySelectize = function (settings) {
     settings.load = function(query, callback) {
         self.runprocess = false;
         $.ajax({
-            url: settings.loadItemsUrl + "?keyword=" + encodeURIComponent(query) + settings.additionalUrlParams,
+            url: settings.loadItemsUrl + "?keyword=" + encodeURIComponent(query) + self.additionalUrlParams,
             type: 'GET',
             error: function() {
                 callback();
