@@ -48,10 +48,8 @@ $.fn.lazySelectize = function (settings) {
     settings.onDropdownOpen = function($dropdown) {
         self.selectize.$dropdown_content.unbind("scroll");
 
-        self.selectize.$dropdown_content.scroll(function() {
-            if (self.selectize.getValue() == "") {
-                self.processScroll(this);
-            }
+        self.selectize.$dropdown_content.scroll(function () {
+            self.processScroll(this);
         });
     };
 
@@ -95,7 +93,7 @@ $.fn.lazySelectize = function (settings) {
         }
     };
 
-    self.reloadOptionsData = function() {
+    self.reloadOptionsData = function(callback) {
         $.ajax({
             url: self.loadItemsUrl + "?keyword=" + encodeURIComponent("") + "&index=" + self.pageIndex + self.additionalUrlParams,
             type: 'GET',
@@ -112,6 +110,9 @@ $.fn.lazySelectize = function (settings) {
                 self.runprocess = true;
                 self.selectize.$control.parent().removeClass('loading');
                 self.selectize.$dropdown_content.scrollTop(self.scrollpos);
+                if (callback != undefined) {
+                    callback();
+                }
             }
         });
     }
